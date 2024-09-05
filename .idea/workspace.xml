@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67bc610e-3479-4313-b257-726fbcb05f03" name="Changes" comment="First draft working classes, check if present position in RoseGarden &amp; return item">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="67bc610e-3479-4313-b257-726fbcb05f03" name="Changes" comment="Supplier for all items">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/item/Item.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725277818850</updated>
       <workItem from="1725277819908" duration="1377000" />
-      <workItem from="1725300911073" duration="58093000" />
+      <workItem from="1725300911073" duration="66292000" />
     </task>
     <task id="LOCAL−00001" summary="First draft working classes, check if present position in RoseGarden &amp; return item">
       <option name="closed" value="true" />
@@ -83,7 +83,14 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1725525035237</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Supplier for all items">
+      <option name="closed" value="true" />
+      <created>1725527103152</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1725527103152</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,7 +98,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First draft working classes, check if present position in RoseGarden &amp; return item" />
-    <option name="LAST_COMMIT_MESSAGE" value="First draft working classes, check if present position in RoseGarden &amp; return item" />
+    <MESSAGE value="Supplier for all items" />
+    <option name="LAST_COMMIT_MESSAGE" value="Supplier for all items" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

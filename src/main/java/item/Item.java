@@ -48,6 +48,9 @@ public class Item {
         public Position move(int x, int y) {
             Position position = getPosition();
             return new Position(position.x() + x, position.y() + y);
+
+//            this.position = new Position(position.x() + x, position.y() + y);
+//            return this.position;
         }
 
 //        private Position getPosition() {

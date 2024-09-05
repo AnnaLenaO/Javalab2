@@ -3,19 +3,19 @@ import item.Item;
 
 import record.Position;
 
-public abstract class Player implements Movable {
+public class Player implements Movable {
     private String name;
     private Position position;
     private int health;
     private int strength;
     private Item item;
 
-    public Player(String name, Position position, int health, int strength, Item item) {
-        this.name = name;
-        this.position = position;
-        this.health = health;
-        this.strength = strength;
-        this.item = item;
+    public Player() {
+        this.name = "Gardener";
+        this.position = new Position(10, 11);
+        this.health = 50;
+        this.strength = 10;
+        this.item = new Item.Rose(new Position(8, 9));
     }
 
     public String getName() {
@@ -32,8 +32,12 @@ public abstract class Player implements Movable {
 
     @Override
     public Position move(int x, int y) {
-        Position position = getPosition();
-        return new Position(position.x() + x, position.y() + y);
+//        Position position = getPosition();
+//        return new Position(position.x() + x, position.y() + y);
+
+        this.position = new Position(position.x() + x, position.y() + y);
+        return this.position;
+
 //        Position newPosition = RoseGarden.move(position, x, y);
 //        setPosition(newPosition);
     }
