@@ -3,8 +3,6 @@ import record.Position;
 
 import java.util.ArrayList;
 import java.util.List;
-//import item.Item.Obstacle;
-
 import java.util.Optional;
 import java.util.function.Supplier;
 
@@ -12,7 +10,7 @@ public class Game {
     public static void main(String[] args) {
         //Instanser av Maze & player med new, skapa objekten
         RoseGarden roseGarden = new RoseGarden();
-        List<Player> player = new ArrayList<Player>();
+        List<Player> player = new ArrayList<>();
 //        List<RoseGarden> roseGarden = new ArrayList<>();
 
         //tex säga åt den att ta ett steg framåt (sedan returnera & skriva ut tex de nya positionerna/ändringen i förflyttning)
@@ -32,30 +30,15 @@ public class Game {
 ////                return new Position(2, 5);
 //            }
 //        };
-        Supplier<Position> positionSupplierUppgrade = new Supplier<Position>() {
-            @Override
-            public Position get() {
-                return new Position(8, 9);
-            }
-        };
-        Supplier<Position> positionSupplierRose = new Supplier<Position>() {
-            @Override
-            public Position get() {
-                return new Position(5, 6);
-            }
-        };
-        Supplier<Position> positionSupplierPest = new Supplier<Position>() {
-            @Override
-            public Position get() {
-                return new Position(4, 3);
-            }
-        };
+        Supplier<Item> itemSupplierUppgrade = () -> new Item.Upgrade(new Position(8, 9));
+        Supplier<Item> itemSupplierRose = () -> new Item.Rose(new Position(8, 9));
+        Supplier<Item> itemSupplierPest = () -> new Item.Pest(new Position(4, 3));
+
 
         roseGarden.addToRoseGarden(itemSupplierObstacle);
-//        roseGarden.addToRoseGarden(positionSupplierObstacle);
-//        roseGarden.addToRoseGarden(positionSupplierUppgrade);
-//        roseGarden.addToRoseGarden(positionSupplierRose);
-//        roseGarden.addToRoseGarden(positionSupplierPest);
+        roseGarden.addToRoseGarden(itemSupplierUppgrade);
+        roseGarden.addToRoseGarden(itemSupplierRose);
+        roseGarden.addToRoseGarden(itemSupplierPest);
 
         Position position = new Position(2, 5);
         Optional<Item> item = roseGarden.isPositionInRoseGarden(position);

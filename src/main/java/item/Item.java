@@ -27,24 +27,23 @@ public class Item {
         }
     }
 
-    static class Upgrade extends Item {
+    public static class Upgrade extends Item {
         public Upgrade(Position position) {
             super(position);
         }
     }
 
-    static class Rose extends Item {
+    public static class Rose extends Item {
         public Rose(Position position) {
             super(position);
         }
     }
 
-    abstract static class Pest extends Item implements Movable {
+    public static class Pest extends Item implements Movable {
         public Pest(Position position) {
             super(position);
         }
 
-        //
         @Override
         public Position move(int x, int y) {
             Position position = getPosition();
