@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67bc610e-3479-4313-b257-726fbcb05f03" name="Changes" comment="Supplier for all items">
+    <list default="true" id="67bc610e-3479-4313-b257-726fbcb05f03" name="Changes" comment="Initiate Player with name &amp; items">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RoseGarden.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoseGarden.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/Movable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/item/Item.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +51,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/ALO/YH Systemutvecklare/IntelliJ/9.Java/javalab2/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -74,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725277818850</updated>
       <workItem from="1725277819908" duration="1377000" />
-      <workItem from="1725300911073" duration="66292000" />
+      <workItem from="1725300911073" duration="91459000" />
     </task>
     <task id="LOCAL−00001" summary="First draft working classes, check if present position in RoseGarden &amp; return item">
       <option name="closed" value="true" />
@@ -90,7 +95,14 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1725527103152</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="Initiate Player with name &amp; items">
+      <option name="closed" value="true" />
+      <created>1725562477260</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1725562477260</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,7 +111,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First draft working classes, check if present position in RoseGarden &amp; return item" />
     <MESSAGE value="Supplier for all items" />
-    <option name="LAST_COMMIT_MESSAGE" value="Supplier for all items" />
+    <MESSAGE value="Initiate Player with name &amp; items" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initiate Player with name &amp; items" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

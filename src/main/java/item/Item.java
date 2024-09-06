@@ -4,13 +4,13 @@ import interfaces.Movable;
 import record.Position;
 
 public class Item {
-    private final Position position;
+    static Position position;
 
     public Item(Position position) {
-        this.position = position;
+        Item.position = position;
     }
 
-    public Position getPosition() {
+    public static Position getPosition() {
         return position;
     }
 
@@ -45,33 +45,14 @@ public class Item {
         }
 
         @Override
-        public Position move(int x, int y) {
-            Position position = getPosition();
-            return new Position(position.x() + x, position.y() + y);
-
-//            this.position = new Position(position.x() + x, position.y() + y);
-//            return this.position;
-        }
-
-//        private Position getPosition() {
+        public void move(int x, int y) {
+//            Position position = getPosition();
+//            new Position(position.x() + x, position.y() + y);
+            position = new Position(position.x() + x, position.y() + y);
+//            Position position = new Position(position.x() + x, position.y() + y);
+//
+//            position = new Position(position.x() + x, position.y() + y);
 //            return position;
-//        }
+        }
     }
 }
-
-
-// skatter: svampmedel, rosjord, roshandskar, seckatör
-//uppgraderingar: trädgårdsmästare, trädgårdsingenjör, trädgårdsarkitekt, landskapsarkitekt
-//monster: bladlöss, mördarsnigel, rosrost, svartfläcksjuka, mjöldagg
-//arv
-
-
-//position(x, y)
-//record position:
-//finns i ett eget paket record
-
-
-//Både Player och Maze? kan använda denna record record.Position (implements)
-
-//en Array List som bara sparar kryssen; jag vill ställa mig på den här positionen, finns det något Item där?
-

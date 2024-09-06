@@ -8,14 +8,15 @@ public class Player implements Movable {
     private Position position;
     private int health;
     private int strength;
-    private Item item;
+    //    private static Item item;
+    private static Item item;
 
     public Player() {
         this.name = "Gardener";
-        this.position = new Position(10, 11);
+        this.position = new Position(11, 7);
         this.health = 50;
         this.strength = 10;
-        this.item = new Item.Rose(new Position(8, 9));
+        item = new Item.Rose(new Position(8, 9));
     }
 
     public String getName() {
@@ -31,12 +32,11 @@ public class Player implements Movable {
     }
 
     @Override
-    public Position move(int x, int y) {
+    public void move(int x, int y) {
 //        Position position = getPosition();
 //        return new Position(position.x() + x, position.y() + y);
 
         this.position = new Position(position.x() + x, position.y() + y);
-        return this.position;
 
 //        Position newPosition = RoseGarden.move(position, x, y);
 //        setPosition(newPosition);
@@ -58,11 +58,11 @@ public class Player implements Movable {
         this.strength = strength;
     }
 
-    public Item getItem() {
+    public static Item getItem() {
         return item;
     }
 
-    public void setItem(Item item) {
-        this.item = item;
+    public static void setItem(Item item) {
+        Player.item = item;
     }
 }
