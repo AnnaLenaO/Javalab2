@@ -16,19 +16,20 @@ public class RoseGarden {
         itemsInRoseGarden.add(item);
     }
 
-    public void deleteFromRoseGarden(Item item) {
-        itemsInRoseGarden.remove(item);
-    }
-//    public void deleteFromRoseGarden(Position position) {
-//        items.remove(new Item(position));
-//    }
-
     public Optional<Item> isPositionInRoseGarden(Position position) {
         for (Item item : itemsInRoseGarden) {
-            if (Item.getPosition().equals(position)) {
+            if (item.getPosition().equals(position)) {
                 return Optional.of(item);
             }
         }
         return Optional.empty();
+    }
+
+    public void movePest(int x, int y) {
+        for (Item item : itemsInRoseGarden) {
+            if (item instanceof Item.Pest pest) {
+                pest.move(x, y);
+            }
+        }
     }
 }

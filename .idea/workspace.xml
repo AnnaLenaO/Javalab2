@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67bc610e-3479-4313-b257-726fbcb05f03" name="Changes" comment="Initiate Player with name &amp; items">
+    <list default="true" id="67bc610e-3479-4313-b257-726fbcb05f03" name="Changes" comment="Game logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RoseGarden.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoseGarden.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/Movable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/item/Item.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725277818850</updated>
       <workItem from="1725277819908" duration="1377000" />
-      <workItem from="1725300911073" duration="91459000" />
+      <workItem from="1725300911073" duration="98003000" />
     </task>
     <task id="LOCAL−00001" summary="First draft working classes, check if present position in RoseGarden &amp; return item">
       <option name="closed" value="true" />
@@ -102,7 +101,14 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1725562477260</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Game logic">
+      <option name="closed" value="true" />
+      <created>1725632729476</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1725632729476</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,7 +118,8 @@
     <MESSAGE value="First draft working classes, check if present position in RoseGarden &amp; return item" />
     <MESSAGE value="Supplier for all items" />
     <MESSAGE value="Initiate Player with name &amp; items" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initiate Player with name &amp; items" />
+    <MESSAGE value="Game logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Game logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

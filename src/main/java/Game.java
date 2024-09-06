@@ -5,7 +5,6 @@ import java.util.Optional;
 import java.util.Scanner;
 import java.util.function.Supplier;
 
-
 public class Game {
     public static void main(String[] args) {
         RoseGarden roseGarden = new RoseGarden();
@@ -20,8 +19,6 @@ public class Game {
         System.out.println("Health: " + player.getHealth() + "\n" + "Strength: " + player.getStrength() + "\n" + Player.getItem() + "\n" + "and start at " + player.getPosition());
         System.out.println("Be aware so you don´t go to infinity without finding any roses!");
 
-        /////loop//////////////////////////////////////
-
         boolean restartGame = true;
         while (restartGame) {
             System.out.print("In what direction do you like to go?\n");
@@ -30,32 +27,15 @@ public class Game {
 
             try {
                 switch (direction) {
-                    case "u":
-                        player.move(0, 1);
-                        Item.Pest.move(0, -1);
-                        findIfItemInRoseGarden(player, roseGarden);
-                        break;
-                    case "r":
-                        player.move(1, 0);
-                        Item.Pest.move(-1, 0);
-                        findIfItemInRoseGarden(player, roseGarden);
-                        break;
-                    case "d":
-                        player.move(0, -1);
-                        Item.Pest.move(0, 1);
-                        findIfItemInRoseGarden(player, roseGarden);
-                        break;
-                    case "l":
-                        player.move(-1, 0);
-                        Item.Pest.move(1, 0);
-                        findIfItemInRoseGarden(player, roseGarden);
-                        break;
-                    case "e":
-                        exitGame();
+                    case "u" -> handleMove(player, roseGarden, 0, 1, 0, -1);
+                    case "r" -> handleMove(player, roseGarden, 1, 0, -1, 0);
+                    case "d" -> handleMove(player, roseGarden, 0, -1, 0, 1);
+                    case "l" -> handleMove(player, roseGarden, -1, 0, 1, 0);
+                    case "e" -> {
                         restartGame = false;
-                        break;
-                    default:
-                        System.out.println("Invalid direction");
+                        exitGame();
+                    }
+                    default -> System.out.println("Invalid direction");
                 }
             } catch (Exception e) {
                 throw new RuntimeException(e);
@@ -63,10 +43,18 @@ public class Game {
 
             if (player.getHealth() <= 0 || player.getStrength() <= 0) {
                 System.out.println("Game over\n" + "Yor\n" + "Health: " + player.getHealth() + "\n" + "Strength: " + player.getStrength() + "\n");
-                System.out.println("Your roses: \n" + Player.getItem() + "\n");
+                System.out.println("Your last rose: \n" + Player.getItem() + "\n");
+                System.out.println("Welcome back to try again, " + Player.getName() + "\n");
+                restartGame = false;
                 exitGame();
             }
         }
+    }
+
+    private static void handleMove(Player player, RoseGarden roseGarden, int playerX, int playerY, int pestX, int pestY) {
+        player.move(playerX, playerY);
+        roseGarden.movePest(pestX, pestY);
+        findIfItemInRoseGarden(player, roseGarden);
     }
 
     private static void findIfItemInRoseGarden(Player player, RoseGarden roseGarden) {
@@ -101,10 +89,9 @@ public class Game {
     }
 
     private static void handleRose(Player player, Item itemFound, RoseGarden roseGarden) {
-        System.out.print("Oh Yes! Yo got a rose!\n" + Player.getItem());
         player.setStrength(player.getStrength() + 1);
         Player.setItem(new Item.Rose(player.getPosition()));
-        roseGarden.deleteFromRoseGarden(itemFound);
+        System.out.print("Oh Yes! Yo got a rose!\n" + Player.getItem());
     }
 
     private static void handlePest(Player player) {

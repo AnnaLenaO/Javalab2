@@ -4,13 +4,13 @@ import interfaces.Movable;
 import record.Position;
 
 public class Item {
-    static Position position;
+    private final Position position;
 
     public Item(Position position) {
-        Item.position = position;
+        this.position = position;
     }
 
-    public static Position getPosition() {
+    public Position getPosition() {
         return position;
     }
 
@@ -18,8 +18,6 @@ public class Item {
     public String toString() {
         return getClass().getSimpleName() + " " + position.toString();
     }
-
-    ///subklasser/////////////////////////
 
     public static class Obstacle extends Item {
         public Obstacle(Position position) {
@@ -46,13 +44,6 @@ public class Item {
 
         @Override
         public void move(int x, int y) {
-//            Position position = getPosition();
-//            new Position(position.x() + x, position.y() + y);
-            position = new Position(position.x() + x, position.y() + y);
-//            Position position = new Position(position.x() + x, position.y() + y);
-//
-//            position = new Position(position.x() + x, position.y() + y);
-//            return position;
         }
     }
 }

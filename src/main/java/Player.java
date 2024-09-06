@@ -4,27 +4,26 @@ import item.Item;
 import record.Position;
 
 public class Player implements Movable {
-    private String name;
+    private static String name;
     private Position position;
     private int health;
     private int strength;
-    //    private static Item item;
     private static Item item;
 
     public Player() {
-        this.name = "Gardener";
+        name = "Gardener";
         this.position = new Position(11, 7);
         this.health = 50;
         this.strength = 10;
         item = new Item.Rose(new Position(8, 9));
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        Player.name = name;
     }
 
     public Position getPosition() {
@@ -33,13 +32,7 @@ public class Player implements Movable {
 
     @Override
     public void move(int x, int y) {
-//        Position position = getPosition();
-//        return new Position(position.x() + x, position.y() + y);
-
         this.position = new Position(position.x() + x, position.y() + y);
-
-//        Position newPosition = RoseGarden.move(position, x, y);
-//        setPosition(newPosition);
     }
 
     public int getHealth() {
