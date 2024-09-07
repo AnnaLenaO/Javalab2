@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67bc610e-3479-4313-b257-726fbcb05f03" name="Changes" comment="Game logic">
+    <list default="true" id="67bc610e-3479-4313-b257-726fbcb05f03" name="Changes" comment="Updated game logic, refactor code, correct call for item.getPosition();">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RoseGarden.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoseGarden.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/item/Item.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725277818850</updated>
       <workItem from="1725277819908" duration="1377000" />
-      <workItem from="1725300911073" duration="98003000" />
+      <workItem from="1725300911073" duration="104280000" />
     </task>
     <task id="LOCAL−00001" summary="First draft working classes, check if present position in RoseGarden &amp; return item">
       <option name="closed" value="true" />
@@ -108,7 +105,14 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1725632729476</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Updated game logic, refactor code, correct call for item.getPosition();">
+      <option name="closed" value="true" />
+      <created>1725639475023</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1725639475023</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,7 +123,8 @@
     <MESSAGE value="Supplier for all items" />
     <MESSAGE value="Initiate Player with name &amp; items" />
     <MESSAGE value="Game logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Game logic" />
+    <MESSAGE value="Updated game logic, refactor code, correct call for item.getPosition();" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated game logic, refactor code, correct call for item.getPosition();" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,19 +10,60 @@ public class Game {
         RoseGarden roseGarden = new RoseGarden();
         Player player = new Player();
         Scanner scanner = new Scanner(System.in);
+        StringBuilder sb = new StringBuilder();
 
-        System.out.println("Welcome to RoseGarden!" + "\n" + "What is your name?");
+        var welcomeLines = sb
+                .append("Welcome to RoseGarden!")
+                .append("\n")
+                .append("What is your name?")
+                .append("\n");
+
+        System.out.println(welcomeLines);
         String name = scanner.nextLine();
         player.setName(name);
 
-        System.out.println("Ok, " + name + ", you have:");
-        System.out.println("Health: " + player.getHealth() + "\n" + "Strength: " + player.getStrength() + "\n" + Player.getItem() + "\n" + "and start at " + player.getPosition());
-        System.out.println("Be aware so you don´t go to infinity without finding any roses!");
+        sb.setLength(0);
+        var infoLines = sb
+                .append("Ok, ")
+                .append(name)
+                .append(", you have")
+                .append("\n")
+                .append("Health: ")
+                .append(player.getHealth())
+                .append("\n")
+                .append("Strength: ")
+                .append(player.getStrength())
+                .append("\n")
+                .append(Player.getItem())
+                .append("\n")
+                .append("and start at ")
+                .append(player.getPosition())
+                .append("\n");
+
+        System.out.println(infoLines);
+        System.out.println("Be aware so you don´t go to infinity without finding any roses!\n");
 
         boolean restartGame = true;
         while (restartGame) {
-            System.out.print("In what direction do you like to go?\n");
-            System.out.print("Press " + "\"u\" " + "for upp, " + "\"r\" " + "for right, " + "\"d\" " + "for down, " + "\"l\" " + "for left " + "or " + "\"e\" " + "for Exit, " + "\n");
+            sb.setLength(0);
+            var directionOptionLines = sb
+                    .append("In what direction do you like to go?")
+                    .append("\n")
+                    .append("Press ")
+                    .append("\"u\" ")
+                    .append("for upp, ")
+                    .append("\"r\" ")
+                    .append("for right, ")
+                    .append("\"d\" ")
+                    .append("for down, ")
+                    .append("\"l\" ")
+                    .append("for left ")
+                    .append("or ")
+                    .append("\"e\" ")
+                    .append("for Exit ")
+                    .append("\n");
+
+            System.out.print(directionOptionLines);
             String direction = scanner.nextLine();
 
             try {
@@ -42,9 +83,26 @@ public class Game {
             }
 
             if (player.getHealth() <= 0 || player.getStrength() <= 0) {
-                System.out.println("Game over\n" + "Yor\n" + "Health: " + player.getHealth() + "\n" + "Strength: " + player.getStrength() + "\n");
-                System.out.println("Your last rose: \n" + Player.getItem() + "\n");
-                System.out.println("Welcome back to try again, " + Player.getName() + "\n");
+                sb.setLength(0);
+                var gameOverLines = sb
+                        .append("Game over!")
+                        .append("\n")
+                        .append("Your")
+                        .append("\n")
+                        .append("Health: ")
+                        .append(player.getHealth())
+                        .append("\n")
+                        .append("Strength: ")
+                        .append(player.getStrength())
+                        .append("\n")
+                        .append("Last rose: ")
+                        .append(Player.getItem())
+                        .append("\n")
+                        .append("Welcome back to try again, ")
+                        .append(Player.getName())
+                        .append("\n");
+
+                System.out.println(gameOverLines);
                 restartGame = false;
                 exitGame();
             }
@@ -91,11 +149,11 @@ public class Game {
     private static void handleRose(Player player, Item itemFound, RoseGarden roseGarden) {
         player.setStrength(player.getStrength() + 1);
         Player.setItem(new Item.Rose(player.getPosition()));
-        System.out.print("Oh Yes! Yo got a rose!\n" + Player.getItem());
+        System.out.print("Oh Yes! Yo got a rose!\n" + Player.getItem() + "\n");
     }
 
     private static void handlePest(Player player) {
-        System.out.print("Oh No! The pest killed a rose. You are getting weaker" + "\n");
+        System.out.print("Oh No! The pest killed a rose. You are getting weaker\n");
         player.setHealth(player.getHealth() - 5);
         player.setStrength(player.getStrength() - 8);
         System.out.print("Your strength is now: " + player.getStrength() + "\n");
