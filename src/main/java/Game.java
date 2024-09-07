@@ -120,10 +120,9 @@ public class Game {
         Position position = player.getPosition();
         Optional<Item> item = roseGarden.isPositionInRoseGarden(position);
         item.ifPresent(itemFound -> updatePlayerItems(player, itemFound, roseGarden));
-        item.orElseGet(() -> {
+        if (item.isEmpty()) {
             System.out.println("No items in " + position);
-            return null;
-        });
+        }
     }
 
     private static void updatePlayerItems(Player player, Item itemFound, RoseGarden roseGarden) {

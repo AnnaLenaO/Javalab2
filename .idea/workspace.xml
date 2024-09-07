@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67bc610e-3479-4313-b257-726fbcb05f03" name="Changes" comment="Updated game logic, refactor code, correct call for item.getPosition();">
+    <list default="true" id="67bc610e-3479-4313-b257-726fbcb05f03" name="Changes" comment="StringBuilder for long lines &amp; use of setLengt(0)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
     </list>
@@ -75,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725277818850</updated>
       <workItem from="1725277819908" duration="1377000" />
-      <workItem from="1725300911073" duration="104280000" />
+      <workItem from="1725300911073" duration="113221000" />
     </task>
     <task id="LOCAL−00001" summary="First draft working classes, check if present position in RoseGarden &amp; return item">
       <option name="closed" value="true" />
@@ -112,7 +112,14 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1725639475023</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="StringBuilder for long lines &amp; use of setLengt(0)">
+      <option name="closed" value="true" />
+      <created>1725726058131</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1725726058131</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +131,8 @@
     <MESSAGE value="Initiate Player with name &amp; items" />
     <MESSAGE value="Game logic" />
     <MESSAGE value="Updated game logic, refactor code, correct call for item.getPosition();" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated game logic, refactor code, correct call for item.getPosition();" />
+    <MESSAGE value="StringBuilder for long lines &amp; use of setLengt(0)" />
+    <option name="LAST_COMMIT_MESSAGE" value="StringBuilder for long lines &amp; use of setLengt(0)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
