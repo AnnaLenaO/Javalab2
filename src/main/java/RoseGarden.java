@@ -26,10 +26,16 @@ public class RoseGarden {
     }
 
     public void movePest(int x, int y) {
-        for (Item item : itemsInRoseGarden) {
-            if (item instanceof Item.Pest pest) {
-                pest.move(x, y);
-            }
-        }
+//        for (Item item : itemsInRoseGarden) {
+//            if (item instanceof Item.Pest pest) {
+////                pest.move(x, y);
+//            }
+//        }
+        itemsInRoseGarden.stream()
+//                .filter(item -> item instanceof Item.Pest)
+                .filter(Item.Pest.class::isInstance)
+//                .map(item -> (Item.Pest) item)
+                .map(Item.Pest.class::cast)
+                .forEach(pest -> pest.move(x, y));
     }
 }
