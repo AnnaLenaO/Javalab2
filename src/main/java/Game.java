@@ -42,6 +42,7 @@ public class Game {
 
         System.out.println(infoLines);
         System.out.println("Be aware so you don´t go to infinity without finding any roses!\n");
+        adItemPositionToRoseGarden(roseGarden);
 
         boolean restartGame = true;
         while (restartGame) {
@@ -68,10 +69,10 @@ public class Game {
 
             try {
                 switch (direction) {
-                    case "u" -> handleMove(player, roseGarden, 0, 1, 0, -1);
-                    case "r" -> handleMove(player, roseGarden, 1, 0, -1, 0);
-                    case "d" -> handleMove(player, roseGarden, 0, -1, 0, 1);
-                    case "l" -> handleMove(player, roseGarden, -1, 0, 1, 0);
+                    case "u" -> handleMove(player, roseGarden, (new Position(0, 1)));
+                    case "r" -> handleMove(player, roseGarden, (new Position(1, 0)));
+                    case "d" -> handleMove(player, roseGarden, (new Position(0, -1)));
+                    case "l" -> handleMove(player, roseGarden, (new Position(-1, 0)));
                     case "e" -> {
                         restartGame = false;
                         exitGame();
@@ -107,22 +108,37 @@ public class Game {
                 exitGame();
             }
         }
+        scanner.close();
     }
 
-    private static void handleMove(Player player, RoseGarden roseGarden, int playerX, int playerY, int pestX, int pestY) {
-        player.move(playerX, playerY);
-        roseGarden.movePest(pestX, pestY);
-        findIfItemInRoseGarden(player, roseGarden);
+    private static void handleMove(Player player, RoseGarden roseGarden, Position playerDirection) {
+        player.move(playerDirection.x(), playerDirection.y());
+        roseGarden.movePest(playerDirection, -playerDirection.x(), -playerDirection.y());
+        findIfItemInRoseGarden(player, roseGarden, playerDirection);
     }
 
-    private static void findIfItemInRoseGarden(Player player, RoseGarden roseGarden) {
-        adItemPositionToRoseGarden(roseGarden);
+    private static void findIfItemInRoseGarden(Player player, RoseGarden roseGarden, Position playerDirection) {
         Position position = player.getPosition();
         List<Item> items = roseGarden.isPositionInRoseGarden(position);
         if (items.isEmpty()) {
             System.out.println("No items in " + position);
         }
-        items.forEach(item -> updatePlayerItems(player, item));
+        items.stream()
+                .peek(item -> updatePlayerItems(player, item))
+                .filter(Item.Obstacle.class::isInstance)
+                .findAny()
+                .ifPresent(item -> handleMoveBack(player, playerDirection));
+    }
+
+    private static void handleMoveBack(Player player, Position playerDirection) {
+        if (playerDirection.x() != 0) {
+            player.move(-playerDirection.x(), 0);
+        }
+
+        if (playerDirection.y() != 0) {
+            player.move(0, -playerDirection.y());
+
+        }
     }
 
     private static void updatePlayerItems(Player player, Item item) {
@@ -152,7 +168,7 @@ public class Game {
     }
 
     private static void handlePest(Player player) {
-        System.out.print("Oh No! The pest killed a rose. You are getting weaker\n");
+        System.out.print("Oh No! The pest is everywhere. You are getting weaker\n");
         player.setHealth(player.getHealth() - 5);
         player.setStrength(player.getStrength() - 8);
         System.out.print("Your strength is now: " + player.getStrength() + "\n");

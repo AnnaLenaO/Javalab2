@@ -23,10 +23,16 @@ public class RoseGarden {
                 .collect(Collectors.toList());
     }
 
-    public void movePest(int x, int y) {
+    public void movePest(Position playerDirection, int x, int y) {
         itemsInRoseGarden.stream()
                 .filter(Item.Pest.class::isInstance)
                 .map(Item.Pest.class::cast)
-                .forEach(pest -> pest.move(x, y));
+                .forEach(pest -> {
+                    Position position = pest.getPosition();
+                    Position newPestPosition = new Position(position.x() + x, position.y() + y);
+                    if (!newPestPosition.equals(playerDirection)) {
+                        pest.move(x, y);
+                    }
+                });
     }
 }
