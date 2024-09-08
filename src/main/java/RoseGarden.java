@@ -17,20 +17,20 @@ public class RoseGarden {
         itemsInRoseGarden.add(item);
     }
 
-    public List<Item> isPositionInRoseGarden(Position position) {
+    public List<Item> getItemsAtPositionInRoseGarden(Position position) {
         return itemsInRoseGarden.stream()
                 .filter(item -> item.getPosition().equals(position))
                 .collect(Collectors.toList());
     }
 
-    public void movePest(Position playerDirection, int x, int y) {
+    public void movePest(Player player, int x, int y) {
         itemsInRoseGarden.stream()
                 .filter(Item.Pest.class::isInstance)
                 .map(Item.Pest.class::cast)
                 .forEach(pest -> {
                     Position position = pest.getPosition();
                     Position newPestPosition = new Position(position.x() + x, position.y() + y);
-                    if (!newPestPosition.equals(playerDirection)) {
+                    if (!newPestPosition.equals(player.getPosition())) {
                         pest.move(x, y);
                     }
                 });

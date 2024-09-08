@@ -113,13 +113,13 @@ public class Game {
 
     private static void handleMove(Player player, RoseGarden roseGarden, Position playerDirection) {
         player.move(playerDirection.x(), playerDirection.y());
-        roseGarden.movePest(playerDirection, -playerDirection.x(), -playerDirection.y());
+        roseGarden.movePest(player, -playerDirection.x(), -playerDirection.y());
         findIfItemInRoseGarden(player, roseGarden, playerDirection);
     }
 
     private static void findIfItemInRoseGarden(Player player, RoseGarden roseGarden, Position playerDirection) {
         Position position = player.getPosition();
-        List<Item> items = roseGarden.isPositionInRoseGarden(position);
+        List<Item> items = roseGarden.getItemsAtPositionInRoseGarden(position);
         if (items.isEmpty()) {
             System.out.println("No items in " + position);
         }
