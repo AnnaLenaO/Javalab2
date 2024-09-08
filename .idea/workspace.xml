@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67bc610e-3479-4313-b257-726fbcb05f03" name="Changes" comment="Refactor code with Stream &amp; Collectors to check if item is at position in RoseGarden">
+    <list default="true" id="67bc610e-3479-4313-b257-726fbcb05f03" name="Changes" comment="Call to adItemToPositionInRoseGarden outside loop in main, fewer parameters to handleMove, update movePest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RoseGarden.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoseGarden.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725277818850</updated>
       <workItem from="1725277819908" duration="1377000" />
-      <workItem from="1725300911073" duration="140789000" />
+      <workItem from="1725300911073" duration="141781000" />
     </task>
     <task id="LOCAL−00001" summary="First draft working classes, check if present position in RoseGarden &amp; return item">
       <option name="closed" value="true" />
@@ -141,7 +140,14 @@
       <option name="presentableId" value="LOCAL−00009" />
       <updated>1725781935274</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL−00010" summary="Call to adItemToPositionInRoseGarden outside loop in main, fewer parameters to handleMove, update movePest">
+      <option name="closed" value="true" />
+      <created>1725800762557</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1725800762557</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +163,8 @@
     <MESSAGE value="Replaced code in findIfItemInRoseGarden() to not return null." />
     <MESSAGE value="Refactor movePest to more functional syntax" />
     <MESSAGE value="Refactor code with Stream &amp; Collectors to check if item is at position in RoseGarden" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor code with Stream &amp; Collectors to check if item is at position in RoseGarden" />
+    <MESSAGE value="Call to adItemToPositionInRoseGarden outside loop in main, fewer parameters to handleMove, update movePest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Call to adItemToPositionInRoseGarden outside loop in main, fewer parameters to handleMove, update movePest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

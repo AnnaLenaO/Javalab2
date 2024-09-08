@@ -127,7 +127,7 @@ public class Game {
                 .peek(item -> updatePlayerItems(player, item))
                 .filter(Item.Obstacle.class::isInstance)
                 .findAny()
-                .ifPresent(item -> handleMoveBack(player, playerDirection));
+                .ifPresent(ignored -> handleMoveBack(player, playerDirection));
     }
 
     private static void handleMoveBack(Player player, Position playerDirection) {
