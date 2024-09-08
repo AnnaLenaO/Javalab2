@@ -1,7 +1,7 @@
 import item.Item;
 import record.Position;
 
-import java.util.Optional;
+import java.util.List;
 import java.util.Scanner;
 import java.util.function.Supplier;
 
@@ -118,20 +118,20 @@ public class Game {
     private static void findIfItemInRoseGarden(Player player, RoseGarden roseGarden) {
         adItemPositionToRoseGarden(roseGarden);
         Position position = player.getPosition();
-        Optional<Item> item = roseGarden.isPositionInRoseGarden(position);
-        item.ifPresent(itemFound -> updatePlayerItems(player, itemFound, roseGarden));
-        if (item.isEmpty()) {
+        List<Item> items = roseGarden.isPositionInRoseGarden(position);
+        if (items.isEmpty()) {
             System.out.println("No items in " + position);
         }
+        items.forEach(item -> updatePlayerItems(player, item));
     }
 
-    private static void updatePlayerItems(Player player, Item itemFound, RoseGarden roseGarden) {
-        switch (itemFound) {
+    private static void updatePlayerItems(Player player, Item item) {
+        switch (item) {
             case Item.Obstacle ignored -> handleObstacle();
             case Item.Upgrade ignored -> handleUpgrade(player);
-            case Item.Rose ignored -> handleRose(player, itemFound, roseGarden);
+            case Item.Rose ignored -> handleRose(player);
             case Item.Pest ignored -> handlePest(player);
-            default -> throw new IllegalStateException("Unexpected value: " + itemFound);
+            default -> throw new IllegalStateException("Unexpected value: " + item);
         }
     }
 
@@ -145,7 +145,7 @@ public class Game {
         player.setStrength(player.getStrength() - 5);
     }
 
-    private static void handleRose(Player player, Item itemFound, RoseGarden roseGarden) {
+    private static void handleRose(Player player) {
         player.setStrength(player.getStrength() + 1);
         Player.setItem(new Item.Rose(player.getPosition()));
         System.out.print("Oh Yes! Yo got a rose!\n" + Player.getItem() + "\n");

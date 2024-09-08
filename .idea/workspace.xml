@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67bc610e-3479-4313-b257-726fbcb05f03" name="Changes" comment="Replaced code in findIfItemInRoseGarden() to not return null.">
+    <list default="true" id="67bc610e-3479-4313-b257-726fbcb05f03" name="Changes" comment="Refactor movePest to more functional syntax">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RoseGarden.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoseGarden.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1725277818850</updated>
       <workItem from="1725277819908" duration="1377000" />
-      <workItem from="1725300911073" duration="117813000" />
+      <workItem from="1725300911073" duration="123518000" />
     </task>
     <task id="LOCAL−00001" summary="First draft working classes, check if present position in RoseGarden &amp; return item">
       <option name="closed" value="true" />
@@ -126,7 +127,14 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1725741465026</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="Refactor movePest to more functional syntax">
+      <option name="closed" value="true" />
+      <created>1725746088471</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1725746088471</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +148,8 @@
     <MESSAGE value="Updated game logic, refactor code, correct call for item.getPosition();" />
     <MESSAGE value="StringBuilder for long lines &amp; use of setLengt(0)" />
     <MESSAGE value="Replaced code in findIfItemInRoseGarden() to not return null." />
-    <option name="LAST_COMMIT_MESSAGE" value="Replaced code in findIfItemInRoseGarden() to not return null." />
+    <MESSAGE value="Refactor movePest to more functional syntax" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor movePest to more functional syntax" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
