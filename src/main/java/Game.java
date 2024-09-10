@@ -196,6 +196,6 @@ public class Game {
     }
 
     private static void exitGame() {
-        System.out.println("Spelet avslutas");
+        System.out.println("Goodbye, se you soon");
     }
 }
